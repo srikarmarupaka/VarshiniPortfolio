@@ -22,7 +22,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">Email Me</p>
-                    <p className="text-lg">hello@creativecanvas.design</p>
+                    <p className="text-lg">varshinicheela@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -31,7 +31,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div>
                     <p className="text-sm text-slate-500 font-bold uppercase tracking-wider">Chat with Me</p>
-                    <p className="text-lg">+1 (555) 123-4567</p>
+                    <p className="text-lg">+91 (555) 555-5555</p>
                   </div>
                 </div>
               </div>
@@ -43,9 +43,9 @@ const Contact: React.FC = () => {
                 <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#7d2ae8] transition-colors">
                   <i className="fa-brands fa-linkedin-in"></i>
                 </a>
-                <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#7d2ae8] transition-colors">
+                {/* <a href="#" className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-[#7d2ae8] transition-colors">
                   <i className="fa-brands fa-dribbble"></i>
-                </a>
+                </a> */}
               </div>
             </div>
             
