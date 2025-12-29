@@ -48,7 +48,7 @@ const Hero: React.FC = () => {
               </motion.a>
               <motion.a 
                 whileHover={{ backgroundColor: '#f8fafc' }}
-                href="#ai-brief" 
+                href="#ai-tool" 
                 className="bg-white border-2 border-slate-100 text-slate-900 text-center px-10 py-5 rounded-2xl font-extrabold hover:border-slate-200 transition-all"
               >
                 Try AI Brief Tool
