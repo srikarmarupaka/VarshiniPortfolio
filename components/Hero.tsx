@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import { TAGLINE } from '../constants';
 
 const Hero: React.FC = () => {
   return (
@@ -21,19 +22,19 @@ const Hero: React.FC = () => {
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full bg-slate-100 text-slate-600 text-xs font-bold mb-8 tracking-widest uppercase"
+              className="inline-flex items-center space-x-2 py-1.5 px-4 rounded-full bg-slate-100 text-[#7d2ae8] text-xs font-bold mb-8 tracking-[0.2em] uppercase"
             >
-              <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span>Available for Freelance Design</span>
+              <span className="w-2 h-2 rounded-full bg-[#00C4CC] animate-pulse"></span>
+              <span>{TAGLINE}</span>
             </motion.div>
             
             <h1 className="text-6xl md:text-8xl font-black text-slate-900 leading-[0.9] mb-8">
-              Design that <br /> 
-              <span className="text-transparent bg-clip-text canva-gradient">Defines You.</span>
+              Visual Magic <br /> 
+              <span className="text-transparent bg-clip-text canva-gradient">Crafted in Canva.</span>
             </h1>
             
             <p className="text-xl text-slate-500 mb-12 max-w-lg leading-relaxed font-medium">
-              I'm Varshini, a Canva enthusiast turning bold ideas into pixel-perfect brand experiences. From vibrant social kits to high-stakes pitch decks.
+              Transforming your brand vision into scroll-stopping reality. Specialist in logos, menu cards, invitations, and high-impact digital marketing assets.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-5">
@@ -43,24 +44,32 @@ const Hero: React.FC = () => {
                 href="#portfolio" 
                 className="canva-gradient text-white text-center px-10 py-5 rounded-2xl font-extrabold shadow-2xl shadow-[#7d2ae8]/30 transition-all"
               >
-                Explore Portfolio
+                View Collections
               </motion.a>
               <motion.a 
                 whileHover={{ backgroundColor: '#f8fafc' }}
                 href="#ai-brief" 
                 className="bg-white border-2 border-slate-100 text-slate-900 text-center px-10 py-5 rounded-2xl font-extrabold hover:border-slate-200 transition-all"
               >
-                Generate a Brief
+                Try AI Brief Tool
               </motion.a>
             </div>
             
-            <div className="mt-16 flex items-center gap-8 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-               <span className="text-xs font-bold uppercase tracking-widest text-slate-400">Trusted By</span>
-               <div className="flex gap-6">
-                 <i className="fa-brands fa-shopify text-3xl"></i>
-                 <i className="fa-brands fa-airbnb text-3xl"></i>
-                 <i className="fa-brands fa-stripe text-3xl"></i>
-                 <i className="fa-brands fa-slack text-3xl"></i>
+            <div className="mt-16 flex flex-wrap items-center gap-6">
+               <span className="text-[10px] font-black uppercase tracking-widest text-slate-400 block w-full mb-2">My Design Arsenal</span>
+               <div className="flex gap-4 items-center">
+                 <div className="bg-slate-50 px-4 py-2 rounded-lg border border-slate-100 flex items-center gap-2">
+                    <i className="fa-solid fa-paintbrush text-[#7d2ae8]"></i>
+                    <span className="text-xs font-bold">Canva Pro</span>
+                 </div>
+                 <div className="bg-slate-50 px-4 py-2 rounded-lg border border-slate-100 flex items-center gap-2">
+                    <i className="fa-solid fa-image text-[#00C4CC]"></i>
+                    <span className="text-xs font-bold">Graphic Design</span>
+                 </div>
+                 <div className="bg-slate-50 px-4 py-2 rounded-lg border border-slate-100 flex items-center gap-2">
+                    <i className="fa-solid fa-chart-line text-[#7d2ae8]"></i>
+                    <span className="text-xs font-bold">Ad Strategy</span>
+                 </div>
                </div>
             </div>
           </motion.div>
@@ -71,45 +80,37 @@ const Hero: React.FC = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="relative mt-20 lg:mt-0"
           >
-             <div className="relative z-10 rounded-[2.5rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(125,42,232,0.25)] border-[12px] border-white bg-white">
+             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-[0_50px_100px_-20px_rgba(125,42,232,0.25)] border-[12px] border-white bg-white">
                 <img 
-                  src="https://images.unsplash.com/photo-1542744094-3a31f272c491?auto=format&fit=crop&q=80&w=1200" 
-                  alt="Varshini Design Showcase" 
+                  src="https://images.unsplash.com/photo-1621600411688-4be93cd68504?auto=format&fit=crop&q=80&w=1200" 
+                  alt="Varshini Design Workspace" 
                   className="w-full aspect-[4/5] object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#7d2ae8]/40 to-transparent"></div>
              </div>
              
-             {/* Dynamic Tooltips */}
+             {/* Floating elements with specific services */}
              <motion.div 
-               animate={{ y: [0, -10, 0] }}
+               animate={{ y: [0, -15, 0] }}
                transition={{ duration: 4, repeat: Infinity }}
-               className="absolute -top-8 -right-8 glass-effect p-5 rounded-2xl shadow-2xl z-20 flex items-center gap-4"
+               className="absolute -top-12 -right-6 glass-effect p-6 rounded-[2rem] shadow-2xl z-20"
              >
-                <div className="w-10 h-10 bg-[#00C4CC] rounded-full flex items-center justify-center text-white">
-                  <i className="fa-solid fa-wand-magic-sparkles"></i>
-                </div>
-                <div>
-                  <p className="text-xs font-bold text-slate-400 uppercase">Magic Tool</p>
-                  <p className="text-sm font-black">Canva Pro Expert</p>
+                <div className="flex flex-col items-center gap-2">
+                  <div className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center">
+                    <i className="fa-solid fa-gift text-pink-500"></i>
+                  </div>
+                  <p className="text-[10px] font-black uppercase tracking-tighter">Festive Special</p>
                 </div>
              </motion.div>
 
              <motion.div 
-               animate={{ x: [0, 10, 0] }}
-               transition={{ duration: 5, repeat: Infinity, delay: 1 }}
-               className="absolute -bottom-6 -left-12 glass-effect p-6 rounded-2xl shadow-2xl z-20"
+               animate={{ x: [0, 15, 0] }}
+               transition={{ duration: 6, repeat: Infinity, delay: 1 }}
+               className="absolute top-1/3 -left-12 glass-effect p-4 rounded-2xl shadow-2xl z-20"
              >
-                <div className="flex items-center gap-4">
-                  <div className="flex -space-x-3">
-                    {[1,2,3].map(i => (
-                      <img key={i} src={`https://i.pravatar.cc/100?u=${i}`} className="w-8 h-8 rounded-full border-2 border-white" />
-                    ))}
-                  </div>
-                  <div>
-                    <p className="text-sm font-black">500+ Graphics</p>
-                    <p className="text-xs text-slate-500">Delivered this year</p>
-                  </div>
+                <div className="flex items-center gap-3">
+                  <i className="fa-solid fa-check-double text-green-500"></i>
+                  <span className="text-sm font-black">Menu Expert</span>
                 </div>
              </motion.div>
           </motion.div>

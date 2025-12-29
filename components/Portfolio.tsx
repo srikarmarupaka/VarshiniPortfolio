@@ -5,7 +5,7 @@ import { PROJECTS } from '../constants';
 
 const Portfolio: React.FC = () => {
   const [filter, setFilter] = useState('All');
-  const categories = ['All', 'Social Media', 'Branding', 'Presentations', 'Print'];
+  const categories = ['All', 'Logos', 'Menus', 'Invitations', 'Catalogues', 'Festive', 'Labels'];
 
   const filteredProjects = filter === 'All' 
     ? PROJECTS 
@@ -15,8 +15,17 @@ const Portfolio: React.FC = () => {
     <section id="portfolio" className="py-32 bg-white">
       <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6 underline decoration-[#00C4CC]/30 underline-offset-8 decoration-8">Work that Works.</h2>
-          <div className="flex flex-wrap justify-center gap-3 mt-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-6xl font-black text-slate-900 mb-6">Masterpieces in Detail.</h2>
+            <p className="text-slate-500 text-lg font-medium max-w-2xl mx-auto">
+              A curated selection of my favorite design projects, from brand identities to festive campaign kits.
+            </p>
+          </motion.div>
+          <div className="flex flex-wrap justify-center gap-3 mt-12">
             {categories.map((cat) => (
               <button
                 key={cat}
@@ -24,7 +33,7 @@ const Portfolio: React.FC = () => {
                 className={`px-8 py-3 rounded-2xl text-sm font-bold transition-all ${
                   filter === cat 
                     ? 'canva-gradient text-white shadow-xl shadow-[#7d2ae8]/30' 
-                    : 'bg-slate-50 text-slate-500 hover:bg-slate-100'
+                    : 'bg-slate-50 text-slate-500 hover:bg-slate-100 hover:text-slate-900'
                 }`}
               >
                 {cat}
@@ -48,7 +57,7 @@ const Portfolio: React.FC = () => {
                 transition={{ duration: 0.4 }}
                 className="group relative cursor-pointer"
               >
-                <div className="relative overflow-hidden rounded-[2rem] bg-slate-100 aspect-[4/5] shadow-lg group-hover:shadow-2xl transition-all duration-500">
+                <div className="relative overflow-hidden rounded-[2.5rem] bg-slate-100 aspect-[4/5] shadow-lg group-hover:shadow-2xl transition-all duration-500">
                   <img 
                     src={project.imageUrl} 
                     alt={project.title} 
@@ -58,15 +67,15 @@ const Portfolio: React.FC = () => {
                     <span className="inline-block px-3 py-1 bg-[#00C4CC] text-white text-[10px] font-black uppercase tracking-widest rounded-lg w-fit mb-4">
                       {project.category}
                     </span>
-                    <h3 className="text-3xl font-black text-white mb-3">{project.title}</h3>
+                    <h3 className="text-3xl font-black text-white mb-3 leading-tight">{project.title}</h3>
                     <p className="text-white/80 text-sm font-medium leading-relaxed">{project.description}</p>
-                    <div className="mt-6 flex gap-4">
-                      <button className="bg-white/20 backdrop-blur-md text-white p-3 rounded-full hover:bg-white hover:text-[#7d2ae8] transition-all">
-                        <i className="fa-solid fa-eye"></i>
-                      </button>
-                      <button className="bg-white/20 backdrop-blur-md text-white p-3 rounded-full hover:bg-white hover:text-[#7d2ae8] transition-all">
-                        <i className="fa-solid fa-heart"></i>
-                      </button>
+                    <div className="mt-8 flex gap-4">
+                      <motion.button 
+                        whileHover={{ scale: 1.1 }}
+                        className="bg-white/20 backdrop-blur-md text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#7d2ae8] text-xs font-bold transition-all"
+                      >
+                        Project Details
+                      </motion.button>
                     </div>
                   </div>
                 </div>
