@@ -13,9 +13,8 @@ const Footer: React.FC = () => {
           </div>
           
           <div className="flex gap-10">
-            <a href="#" className="text-slate-400 hover:text-slate-900 text-sm font-bold transition-all">Instagram</a>
-            {/* <a href="#" className="text-slate-400 hover:text-slate-900 text-sm font-bold transition-all">Behance</a> */}
-            <a href="#" className="text-slate-400 hover:text-slate-900 text-sm font-bold transition-all">LinkedIn</a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 text-sm font-bold transition-all">Instagram</a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-slate-900 text-sm font-bold transition-all">LinkedIn</a>
           </div>
 
           <p className="text-slate-400 text-sm font-medium">

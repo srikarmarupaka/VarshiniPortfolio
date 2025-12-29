@@ -70,12 +70,13 @@ const Portfolio: React.FC = () => {
                     <h3 className="text-3xl font-black text-white mb-3 leading-tight">{project.title}</h3>
                     <p className="text-white/80 text-sm font-medium leading-relaxed">{project.description}</p>
                     <div className="mt-8 flex gap-4">
-                      <motion.button 
+                      <motion.a 
                         whileHover={{ scale: 1.1 }}
-                        className="bg-white/20 backdrop-blur-md text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#7d2ae8] text-xs font-bold transition-all"
+                        href="#contact"
+                        className="bg-white/20 backdrop-blur-md text-white px-6 py-3 rounded-full hover:bg-white hover:text-[#7d2ae8] text-xs font-bold transition-all text-center"
                       >
-                        Project Details
-                      </motion.button>
+                        Enquire Now
+                      </motion.a>
                     </div>
                   </div>
                 </div>
